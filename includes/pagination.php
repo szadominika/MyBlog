@@ -1,17 +1,17 @@
 <?php $base = strtok($_SERVER["REQUEST_URI"], '?'); ?>
 
 <nav>
-    <ul>
-        <li>
+    <ul class="pagination">
+        <li class="page-item">
             <?php if ($paginator->previous): ?>
-                <a href="<?= $base; ?>?page=<?= $paginator->previous; ?>">Previous</a>
+                <a class="page-link" href="<?= $base; ?>?page=<?= $paginator->previous; ?>">Previous</a>
             <?php else: ?>
                 Previous
             <?php endif; ?>
         </li>
-        <li>
+        <li class="page-item">
             <?php if ($paginator->next): ?>
-                <a href="<?= $base; ?>?page=<?= $paginator->next; ?>">Next</a>
+                <a class="page-link" href="<?= $base; ?>?page=<?= $paginator->next; ?>">Next</a>
             <?php else: ?>
                 Next
             <?php endif; ?>
