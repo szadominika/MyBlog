@@ -114,12 +114,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <?php require '../includes/header.php'; ?>
 
-<h2>Edit article image</h2>
+<h2 class = "mb-5">Edit article image</h2>
 
 <?php if ($article->image_file) : ?>
     <img src="/uploads/<?= $article->image_file; ?>">
-
-    <a class="delete" href="delete-article-image.php?id=<?= $article->id; ?>">Delete</a>
+    <br>
+    <a  class="delete m-4 likeAButton" href="delete-article-image.php?id=<?= $article->id; ?>">Delete</a>
 
 <?php endif; ?>
 
@@ -130,11 +130,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <form method="post" enctype="multipart/form-data">
 
     <div>
-        <label for="file">Image file</label>
+        <label for="file" class = "m-2">Image file</label>
         <input type="file" name="file" id="file">
     </div>
 
-    <button>Upload</button>
+    <button class = "btn btn-light mt-5">Upload</button>
 
 </form>
 

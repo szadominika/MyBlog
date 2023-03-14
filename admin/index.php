@@ -15,13 +15,13 @@ $articles = Article::getPage($conn, $paginator->limit, $paginator->offset);
 
 <h2>Administration</h2>
 
-<p><a href="new-article.php">New article</a></p>
+<p><a class = "likeAButton mt-3" href="new-article.php">New article</a></p>
 
 <?php if (empty($articles)) : ?>
     <p>No articles found.</p>
 <?php else : ?>
 
-    <table class="table">
+    <table class="table table-striped table-hover table-borderless">
         <thead>
             <tr>
                 <th>Title</th>
@@ -32,14 +32,14 @@ $articles = Article::getPage($conn, $paginator->limit, $paginator->offset);
             <?php foreach ($articles as $article) : ?>
                 <tr>
                     <td>
-                        <a href="article.php?id=<?= $article['id']; ?>"><?= htmlspecialchars($article['title']); ?></a>
+                        <a class = "beautifyLink"  href="article.php?id=<?= $article['id']; ?>"><?= htmlspecialchars($article['title']); ?></a>
                     </td>
                     <td>
                         <?php if ($article['published_at']) : ?>
                             <time><?= $article['published_at'] ?></time>
                         <?php else : ?>
                             Unpublished
-                            <button class="publish" data-id="<?= $article['id'] ?>">Publish</button>
+                            <button class="publish btn" data-id="<?= $article['id'] ?>">Publish</button>
                         <?php endif; ?>
                     </td>
                 </tr>

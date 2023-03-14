@@ -9,4 +9,5 @@ define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_USER', 'konto.robocze.dominika@gmail.com');
 define('SMTP_PASS', '123123iA');
 
-define('SHOW_ERROR_DETAIL', false);
+
+define('SHOW_ERROR_DETAIL', true);

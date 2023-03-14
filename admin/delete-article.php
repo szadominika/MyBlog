@@ -36,8 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <p>Are you sure?</p>
 
-    <button>Delete</button>
-    <a href="article.php?id=<?= $article->id; ?>">Cancel</a>
+    <button class = "btn" >Delete</button>
+    <a class="likeAButton m-4" href="article.php?id=<?= $article->id; ?>">Cancel</a>
 
 </form>
 

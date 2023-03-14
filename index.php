@@ -18,15 +18,15 @@ $articles = Article::getPage($conn, $paginator->limit, $paginator->offset, true)
     <ul id="index">
         <?php foreach ($articles as $article) : ?>
             <li>
-                <article>
-                    <h2><a href="article.php?id=<?= $article['id']; ?>"><?= htmlspecialchars($article['title']); ?></a></h2>
+                <article class="mt-5">
+                    <h2><a class = "beautifyLink" href="article.php?id=<?= $article['id']; ?>"><?= htmlspecialchars($article['title']); ?></a></h2>
 
                     <time datetime="<?= $article['published_at'] ?>"><?php
                         $datetime = new DateTime($article['published_at']);
                         echo $datetime->format("j F, Y");
                     ?></time>
 
-                    <?php if ($article['category_names']) : ?>
+                        <?php if(!is_null($article['category_names'][0])) : ?>
                         <p>Categories:
                             <?php foreach ($article['category_names'] as $name) : ?>
                                 <?= htmlspecialchars($name); ?>
