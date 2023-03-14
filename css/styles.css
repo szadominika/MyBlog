@@ -1,3 +1,9 @@
+h2{
+  text-decoration: none;
+  font-weight: 900;
+
+}
+
 ul#index{
   padding-left: 0;
   list-style-type: none;
@@ -5,3 +11,18 @@ ul#index{
 #message {
   height: 10em;
 }
+
+.likeAButton {
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+
+}
+
+.beautifyLink {
+  text-align: center;
+  text-decoration: none;
+}
+

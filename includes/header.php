@@ -10,28 +10,33 @@
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>My blog</h1>
-        </header>
+    <div class="container text-center">
 
-        <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light ">
 
-                <?php if (Auth::isLoggedIn()) : ?>
-                    
-                    <li class="nav-item"><a class="nav-link" href="/admin/">Admin</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/logout.php">Log out</a></li>
+            <a class="navbar-brand" href="#">My<strong>BLOG</strong></a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 
-                <?php else : ?>
-                    
-                    <li class="nav-item"><a class="nav-link" href="/login.php">Log in</a></li>
+                    <?php if (Auth::isLoggedIn()) : ?>
+                        
+                        <li class="nav-item"><a class="nav-link" href="/admin/">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout.php">Log out</a></li>
 
-                <?php endif; ?>
+                    <?php else : ?>
+                        
+                        <li class="nav-item"><a class="nav-link" href="/login.php">Log in</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="/contact.php">Contact</a></li>
-            </ul>
+                    <?php endif; ?>
+
+                        <li class="nav-item"><a class="nav-link" href="/contact.php">Contact</a></li>
+                </ul>
+            </div>
         </nav>
 
         <main>
