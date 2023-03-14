@@ -26,7 +26,7 @@ $articles = Article::getPage($conn, $paginator->limit, $paginator->offset, true)
                         echo $datetime->format("j F, Y");
                     ?></time>
 
-                    <?php if ($article['category_names']) : ?>
+                        <?php if(!is_null($article['category_names'][0])) : ?>
                         <p>Categories:
                             <?php foreach ($article['category_names'] as $name) : ?>
                                 <?= htmlspecialchars($name); ?>

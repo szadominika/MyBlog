@@ -1,3 +1,4 @@
 <Files config.php>
-    Deny from all
+ Require all denied
+
 </Files>

@@ -58,6 +58,11 @@ $("button.publish").on("click", function(e) {
 
         button.parent().html(data);
 
+    })
+    .fail(function(data) {
+
+        alert("An error occurred");
+
     });
 });
 
@@ -68,9 +73,11 @@ $('#published_at').datetimepicker({
     format:'Y-m-d H:i:s'
 });
 
-
+/**
+ * Validate the contact form
+ */
 $("#formContact").validate({
-    rules: {
+	rules: {
 		email: {
 			required: true,
 			email: true
@@ -81,5 +88,5 @@ $("#formContact").validate({
 		message: {
 			required: true
 		}
-    }
+	}
 });
